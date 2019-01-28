@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ilshat/networks_labs/main.c
+/home/ilshat/networks_labs/lab_1/main.c
 stdlib.h
 -
 stdio.h

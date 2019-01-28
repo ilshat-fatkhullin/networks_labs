@@ -24,7 +24,7 @@ int peek()
         printf("Error: stack is empty.\n");
         return 0;
     }
-
+    printf("%d\n", root->value);
     return root->value;
 }
 
@@ -114,6 +114,14 @@ void display()
 
 void create()
 {
+    if (root != NULL)
+    {
+        while (count > 0) {
+            pop();
+        }
+        free(root);
+    }
+
     root = malloc(sizeof(struct Node));
     count = 0;
     printf("Stack created.\n");

@@ -1,3 +1,0 @@
-/home/ilshat/networks_labs/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/ilshat/networks_labs/cmake-build-debug/CMakeFiles/networks_labs.dir
-/home/ilshat/networks_labs/cmake-build-debug/CMakeFiles/edit_cache.dir
