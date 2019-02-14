@@ -48,10 +48,10 @@ RM = /snap/clion/61/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ilshat/networks_labs/lab_1
+CMAKE_SOURCE_DIR = /home/ilshat/networks_labs/lab_4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ilshat/networks_labs/lab_1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ilshat/networks_labs/lab_4/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ilshat/networks_labs/lab_1/cmake-build-debug/CMakeFiles /home/ilshat/networks_labs/lab_1/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ilshat/networks_labs/lab_4/cmake-build-debug/CMakeFiles /home/ilshat/networks_labs/lab_4/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ilshat/networks_labs/lab_1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ilshat/networks_labs/lab_4/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named networks_labs
+# Target rules for targets named lab_4
 
 # Build rule for target.
-networks_labs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 networks_labs
-.PHONY : networks_labs
+lab_4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lab_4
+.PHONY : lab_4
 
 # fast build rule for target.
-networks_labs/fast:
-	$(MAKE) -f CMakeFiles/networks_labs.dir/build.make CMakeFiles/networks_labs.dir/build
-.PHONY : networks_labs/fast
+lab_4/fast:
+	$(MAKE) -f CMakeFiles/lab_4.dir/build.make CMakeFiles/lab_4.dir/build
+.PHONY : lab_4/fast
 
-main.o: main.c.o
+server.o: server.c.o
 
-.PHONY : main.o
+.PHONY : server.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/networks_labs.dir/build.make CMakeFiles/networks_labs.dir/main.c.o
-.PHONY : main.c.o
+server.c.o:
+	$(MAKE) -f CMakeFiles/lab_4.dir/build.make CMakeFiles/lab_4.dir/server.c.o
+.PHONY : server.c.o
 
-main.i: main.c.i
+server.i: server.c.i
 
-.PHONY : main.i
+.PHONY : server.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/networks_labs.dir/build.make CMakeFiles/networks_labs.dir/main.c.i
-.PHONY : main.c.i
+server.c.i:
+	$(MAKE) -f CMakeFiles/lab_4.dir/build.make CMakeFiles/lab_4.dir/server.c.i
+.PHONY : server.c.i
 
-main.s: main.c.s
+server.s: server.c.s
 
-.PHONY : main.s
+.PHONY : server.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/networks_labs.dir/build.make CMakeFiles/networks_labs.dir/main.c.s
-.PHONY : main.c.s
+server.c.s:
+	$(MAKE) -f CMakeFiles/lab_4.dir/build.make CMakeFiles/lab_4.dir/server.c.s
+.PHONY : server.c.s
 
 # Help Target
 help:
@@ -157,11 +157,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... networks_labs"
+	@echo "... lab_4"
 	@echo "... edit_cache"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... server.o"
+	@echo "... server.i"
+	@echo "... server.s"
 .PHONY : help
 
 

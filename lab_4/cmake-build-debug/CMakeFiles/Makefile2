@@ -59,45 +59,45 @@ RM = /snap/clion/61/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ilshat/networks_labs/lab_1
+CMAKE_SOURCE_DIR = /home/ilshat/networks_labs/lab_4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ilshat/networks_labs/lab_1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ilshat/networks_labs/lab_4/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/networks_labs.dir
+# Target rules for target CMakeFiles/lab_4.dir
 
 # All Build rule for target.
-CMakeFiles/networks_labs.dir/all:
-	$(MAKE) -f CMakeFiles/networks_labs.dir/build.make CMakeFiles/networks_labs.dir/depend
-	$(MAKE) -f CMakeFiles/networks_labs.dir/build.make CMakeFiles/networks_labs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ilshat/networks_labs/lab_1/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target networks_labs"
-.PHONY : CMakeFiles/networks_labs.dir/all
+CMakeFiles/lab_4.dir/all:
+	$(MAKE) -f CMakeFiles/lab_4.dir/build.make CMakeFiles/lab_4.dir/depend
+	$(MAKE) -f CMakeFiles/lab_4.dir/build.make CMakeFiles/lab_4.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ilshat/networks_labs/lab_4/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target lab_4"
+.PHONY : CMakeFiles/lab_4.dir/all
 
 # Include target in all.
-all: CMakeFiles/networks_labs.dir/all
+all: CMakeFiles/lab_4.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/networks_labs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ilshat/networks_labs/lab_1/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/networks_labs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ilshat/networks_labs/lab_1/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/networks_labs.dir/rule
+CMakeFiles/lab_4.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ilshat/networks_labs/lab_4/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/lab_4.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ilshat/networks_labs/lab_4/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/lab_4.dir/rule
 
 # Convenience name for target.
-networks_labs: CMakeFiles/networks_labs.dir/rule
+lab_4: CMakeFiles/lab_4.dir/rule
 
-.PHONY : networks_labs
-
-# clean rule for target.
-CMakeFiles/networks_labs.dir/clean:
-	$(MAKE) -f CMakeFiles/networks_labs.dir/build.make CMakeFiles/networks_labs.dir/clean
-.PHONY : CMakeFiles/networks_labs.dir/clean
+.PHONY : lab_4
 
 # clean rule for target.
-clean: CMakeFiles/networks_labs.dir/clean
+CMakeFiles/lab_4.dir/clean:
+	$(MAKE) -f CMakeFiles/lab_4.dir/build.make CMakeFiles/lab_4.dir/clean
+.PHONY : CMakeFiles/lab_4.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/lab_4.dir/clean
 
 .PHONY : clean
 
