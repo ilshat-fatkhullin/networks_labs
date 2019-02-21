@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ilshat/networks_labs/lab_5/common.h
+
+/home/ilshat/networks_labs/lab_5/server.c
+stdio.h
+-
+stdlib.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+netdb.h
+-
+memory.h
+-
+errno.h
+-
+common.h
+/home/ilshat/networks_labs/lab_5/common.h
+arpa/inet.h
+-
+unistd.h
+-
+
