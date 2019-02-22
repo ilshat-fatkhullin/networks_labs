@@ -58,8 +58,6 @@ void setup_udp_communication() {
         read_line(&client_data.group, 256);
         printf("Enter age : ?\n");
         scanf("%u", &client_data.age);
-        printf("Enter connection status (1 - close connection) : ?\n");
-        scanf("%d", &client_data.status);
 	    
 	    /*Code for task 2 goes here*/
 	    /*....*/
