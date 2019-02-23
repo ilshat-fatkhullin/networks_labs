@@ -123,32 +123,32 @@ lab_5/fast:
 	$(MAKE) -f CMakeFiles/lab_5.dir/build.make CMakeFiles/lab_5.dir/build
 .PHONY : lab_5/fast
 
-server.o: server.c.o
+client.o: client.c.o
 
-.PHONY : server.o
+.PHONY : client.o
 
 # target to build an object file
-server.c.o:
-	$(MAKE) -f CMakeFiles/lab_5.dir/build.make CMakeFiles/lab_5.dir/server.c.o
-.PHONY : server.c.o
+client.c.o:
+	$(MAKE) -f CMakeFiles/lab_5.dir/build.make CMakeFiles/lab_5.dir/client.c.o
+.PHONY : client.c.o
 
-server.i: server.c.i
+client.i: client.c.i
 
-.PHONY : server.i
+.PHONY : client.i
 
 # target to preprocess a source file
-server.c.i:
-	$(MAKE) -f CMakeFiles/lab_5.dir/build.make CMakeFiles/lab_5.dir/server.c.i
-.PHONY : server.c.i
+client.c.i:
+	$(MAKE) -f CMakeFiles/lab_5.dir/build.make CMakeFiles/lab_5.dir/client.c.i
+.PHONY : client.c.i
 
-server.s: server.c.s
+client.s: client.c.s
 
-.PHONY : server.s
+.PHONY : client.s
 
 # target to generate assembly for a file
-server.c.s:
-	$(MAKE) -f CMakeFiles/lab_5.dir/build.make CMakeFiles/lab_5.dir/server.c.s
-.PHONY : server.c.s
+client.c.s:
+	$(MAKE) -f CMakeFiles/lab_5.dir/build.make CMakeFiles/lab_5.dir/client.c.s
+.PHONY : client.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... lab_5"
 	@echo "... edit_cache"
-	@echo "... server.o"
-	@echo "... server.i"
-	@echo "... server.s"
+	@echo "... client.o"
+	@echo "... client.i"
+	@echo "... client.s"
 .PHONY : help
 
 

@@ -9,7 +9,7 @@
 #define DEST_PORT            2000
 #define SERVER_IP_ADDRESS   "127.0.0.1"
 
-test_struct_t client_data;
+client_data_t client_data;
 result_struct_t result;
 
 void setup_udp_communication() {
@@ -50,13 +50,16 @@ void setup_udp_communication() {
 
     while(1) {
 
+        memset(client_data.name, 0, 256);
+        memset(client_data.group, 0, 256);
+
 	    /*Prompt the user to enter data*/
 	    /*You will want to change the promt for the second task*/
-	    printf("Enter name : ?\n");
-	    read_line(&client_data.name, 256);
-	    printf("Enter group : ?\n");
-        read_line(&client_data.group, 256);
-        printf("Enter age : ?\n");
+	    printf("Enter name:\n");
+	    scanf("%s", client_data.name);
+	    printf("Enter group:\n");
+        scanf("%s", client_data.group);
+        printf("Enter age:\n");
         scanf("%u", &client_data.age);
 	    
 	    /*Code for task 2 goes here*/
@@ -70,7 +73,7 @@ void setup_udp_communication() {
 
 	    sent_recv_bytes = sendto(sockfd, 
 		   &client_data,
-		   sizeof(test_struct_t), 
+		   sizeof(client_data_t),
 		   0, 
 		   (struct sockaddr *)&dest, 
 		   sizeof(struct sockaddr));
@@ -99,16 +102,4 @@ int main(int argc, char **argv) {
     setup_udp_communication();
     printf("application quits\n");
     return 0;
-}
-
-void read_line(char* array, int size) {
-    char c;
-    for (int i = 0; i < size; i++) {
-        scanf("%c", &c);
-        array[i] = c;
-        if (c == '\n') {
-            array[i] = '\0';
-            return;
-        }
-    }
 }

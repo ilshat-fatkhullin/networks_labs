@@ -78,7 +78,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ilshat/networks_labs/lab_5/server.c">
+		<Unit filename="/home/ilshat/networks_labs/lab_5/client.c">
 			<Option target="lab_5"/>
 		</Unit>
 		<Unit filename="/home/ilshat/networks_labs/lab_5/CMakeLists.txt">

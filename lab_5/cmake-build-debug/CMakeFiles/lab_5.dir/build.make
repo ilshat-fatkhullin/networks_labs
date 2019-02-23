@@ -57,27 +57,27 @@ include CMakeFiles/lab_5.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/lab_5.dir/flags.make
 
-CMakeFiles/lab_5.dir/server.c.o: CMakeFiles/lab_5.dir/flags.make
-CMakeFiles/lab_5.dir/server.c.o: ../server.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ilshat/networks_labs/lab_5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/lab_5.dir/server.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab_5.dir/server.c.o   -c /home/ilshat/networks_labs/lab_5/server.c
+CMakeFiles/lab_5.dir/client.c.o: CMakeFiles/lab_5.dir/flags.make
+CMakeFiles/lab_5.dir/client.c.o: ../client.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ilshat/networks_labs/lab_5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/lab_5.dir/client.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab_5.dir/client.c.o   -c /home/ilshat/networks_labs/lab_5/client.c
 
-CMakeFiles/lab_5.dir/server.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab_5.dir/server.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ilshat/networks_labs/lab_5/server.c > CMakeFiles/lab_5.dir/server.c.i
+CMakeFiles/lab_5.dir/client.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab_5.dir/client.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ilshat/networks_labs/lab_5/client.c > CMakeFiles/lab_5.dir/client.c.i
 
-CMakeFiles/lab_5.dir/server.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab_5.dir/server.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ilshat/networks_labs/lab_5/server.c -o CMakeFiles/lab_5.dir/server.c.s
+CMakeFiles/lab_5.dir/client.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab_5.dir/client.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ilshat/networks_labs/lab_5/client.c -o CMakeFiles/lab_5.dir/client.c.s
 
 # Object files for target lab_5
 lab_5_OBJECTS = \
-"CMakeFiles/lab_5.dir/server.c.o"
+"CMakeFiles/lab_5.dir/client.c.o"
 
 # External object files for target lab_5
 lab_5_EXTERNAL_OBJECTS =
 
-lab_5: CMakeFiles/lab_5.dir/server.c.o
+lab_5: CMakeFiles/lab_5.dir/client.c.o
 lab_5: CMakeFiles/lab_5.dir/build.make
 lab_5: CMakeFiles/lab_5.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ilshat/networks_labs/lab_5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable lab_5"

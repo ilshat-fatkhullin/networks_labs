@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/lab_5.dir/server.c.o  -o lab_5 
+/usr/bin/cc -g   CMakeFiles/lab_5.dir/client.c.o  -o lab_5 
