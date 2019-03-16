@@ -79,7 +79,7 @@ int find_peer_with_addr(struct in_addr addr) {
 
 void handle_client(struct peer* server_peer) {
     int client_socket_fd;
-    client_socket_fd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    client_socket_fd = socket(AF_INET, SOCK_STREAM, 0);
 
     if (client_socket_fd == -1) {
         printf("Client socket creation failed.\n");
@@ -98,7 +98,6 @@ void handle_client(struct peer* server_peer) {
     if (connect(client_socket_fd, (struct sockaddr*)&server_addr, sizeof(server_addr)) != 0) {
         char* ip_line = inet_ntoa(server_peer->addr);
         printf("Connection with the server %s failed. Peer removed.\n", ip_line);
-        free(ip_line);
         remove_peer(server_peer);
         return;
     }
@@ -145,7 +144,7 @@ void handle_requests_from_client(int* client_sock_fd) {
 void handle_server() {
     int server_sock_fd;
 
-    server_sock_fd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    server_sock_fd = socket(AF_INET, SOCK_STREAM, 0);
 
     if (server_sock_fd == -1) {
         printf("Server socket creation failed.\n");
@@ -180,7 +179,7 @@ void handle_server() {
     int client_sock_fd;
     struct sockaddr_in client_addr;
     while (1) {
-        client_sock_fd = accept(server_sock_fd, (struct sockaddr*)&client_addr, (socklen_t*)sizeof(client_addr));
+        client_sock_fd = accept(server_sock_fd, (struct sockaddr*)&client_addr, (socklen_t*)&addr_len);
 
         if (client_sock_fd < 0) {
             printf("Server request accepting failed.\n");
