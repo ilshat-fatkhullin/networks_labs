@@ -43,8 +43,7 @@ void add_peer(struct peer *new_peer)
         if (peers[i] == NULL) {
             peers[i] = new_peer;
             number_of_peers++;
-            pthread_mutex_unlock(&lock);
-            return;
+            break;
         }
     }
     pthread_mutex_unlock(&lock);
@@ -59,6 +58,7 @@ void remove_peer(struct peer *new_peer)
             free(peers[i]);
             peers[i] = NULL;
             number_of_peers--;
+            break;
         }
     }
     pthread_mutex_unlock(&lock);
@@ -68,6 +68,9 @@ int find_peer_with_addr(struct in_addr addr) {
     pthread_mutex_lock(&lock);
     for (int i = 0; i < MAX_NUMBER_OF_PEERS; i++)
     {
+        if (peers[i] == NULL)
+            continue;
+
         if (peers[i]->addr.s_addr == addr.s_addr) {
             pthread_mutex_unlock(&lock);
             return 1;
