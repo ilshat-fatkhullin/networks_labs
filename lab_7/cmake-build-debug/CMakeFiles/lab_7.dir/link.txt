@@ -1,0 +1,1 @@
+/usr/bin/cc  -pthread -g   CMakeFiles/lab_7.dir/main.c.o  -o lab_7 

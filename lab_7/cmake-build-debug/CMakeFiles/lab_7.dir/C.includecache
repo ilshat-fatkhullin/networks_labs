@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ilshat/networks_labs/lab_7/main.c
+stdio.h
+-
+sys/socket.h
+-
+stdlib.h
+-
+netdb.h
+-
+pthread.h
+-
+string.h
+-
+
