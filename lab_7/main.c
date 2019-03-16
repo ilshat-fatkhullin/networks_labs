@@ -193,7 +193,7 @@ void handle_server() {
         }
 
         if (find_peer_with_addr(client_addr.sin_addr)) {
-            struct peer* new_peer = malloc(sizeof(new_peer));
+            struct peer* new_peer = malloc(sizeof(struct peer));
             new_peer->addr = client_addr.sin_addr;
             add_peer(new_peer);
             pthread_t thread_id;
