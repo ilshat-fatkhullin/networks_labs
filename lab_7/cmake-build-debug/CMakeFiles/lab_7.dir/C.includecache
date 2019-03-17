@@ -19,4 +19,8 @@ pthread.h
 -
 string.h
 -
+netinet/in.h
+-
+arpa/inet.h
+-
 

@@ -4,6 +4,8 @@
 #include <netdb.h>
 #include <pthread.h>
 #include <string.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 
 #define MAIN_PORT 8080
 #define MAX_NUMBER_OF_PEERS 12
