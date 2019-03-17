@@ -14,9 +14,6 @@
 #define SENDING_FINISHED "SENDING FINISHED"
 #define PEERS_REFRESH_TIME 10
 
-#define IS_FIRST_PEER 1
-#define FIRST_PEER_IP "127.0.0.0"
-
 pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 
 struct peer {
@@ -127,13 +124,13 @@ void handle_client(struct peer* server_peer) {
 }
 
 void handle_requests_from_client(int* client_sock_fd) {
-    int sock_fd = *client_sock_fd;
     char request_buffer[BUFFER_SIZE];
+    int sock_fd = *client_sock_fd;
 
     while (1) {
         recv(sock_fd, request_buffer, BUFFER_SIZE, 0);
 
-        if (strncmp(request_buffer, GET_PEERS_REQUEST, sizeof(request_buffer)) == 0) {
+        if (strncmp(request_buffer, GET_PEERS_REQUEST, strlen(GET_PEERS_REQUEST) * sizeof(char)) == 0) {
             for (int i = 0; i < MAX_NUMBER_OF_PEERS; i++) {
                 char *addr_line = inet_ntoa(peers[i]->addr);
                 send(sock_fd, addr_line, strlen(addr_line) * sizeof(char), 0);
@@ -194,7 +191,7 @@ void handle_server() {
             printf("Server accepted connection.\n");
         }
 
-        if (find_peer_with_addr(client_addr.sin_addr)) {
+        if (!find_peer_with_addr(client_addr.sin_addr)) {
             struct peer* new_peer = malloc(sizeof(struct peer));
             new_peer->addr = client_addr.sin_addr;
             add_peer(new_peer);
@@ -208,8 +205,11 @@ void handle_server() {
         }
 
         pthread_t thread_id;
-        if (pthread_create(&thread_id, NULL, (void *)&handle_requests_from_client, (void *)(&client_sock_fd)) != 0) {
+        if (pthread_create(&thread_id, NULL, (void *)&handle_requests_from_client, (void *)&client_sock_fd) != 0) {
             printf("Server request handler thread creation failed.\n");
+        }
+        else {
+            printf("Server request handler thread created.\n");
         }
     }
 }
